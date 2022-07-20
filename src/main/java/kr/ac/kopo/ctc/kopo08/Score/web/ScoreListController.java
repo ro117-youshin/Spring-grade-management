@@ -73,7 +73,7 @@ public class ScoreListController {
 	}
 	
 	@PostMapping(value = "/ScoreList/Update")
-	public String update(Model model, HttpServletRequest request) {
+	public String update(HttpServletRequest request) {
 		ScoreList updateList = new ScoreList();
 		updateList.setId(Long.parseLong(request.getParameter("id")));
 		updateList.setName(request.getParameter("name"));
