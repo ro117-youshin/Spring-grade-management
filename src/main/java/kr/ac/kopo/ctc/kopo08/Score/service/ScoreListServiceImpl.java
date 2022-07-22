@@ -73,6 +73,9 @@ public class ScoreListServiceImpl implements ScoreListService {
 		pagination.setsPage(fristPage);
 		
 		int endPage = ((currPage - 1) / pageSize) * pageSize + pageSize;
+		if (lastPage < endPage){
+			endPage = lastPage;	
+		}	
 		pagination.setePage(endPage);
 
 		return pagination;
