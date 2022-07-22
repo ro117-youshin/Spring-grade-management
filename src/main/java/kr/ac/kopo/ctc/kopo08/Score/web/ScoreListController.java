@@ -43,7 +43,7 @@ public class ScoreListController {
 	
 	@RequestMapping(value = "/ScoreList/AllView")
 	public String allView(Model model, @PageableDefault(size=5) Pageable pageable, 
-			@RequestParam(value="page", defaultValue="-1") int currentPage) {
+			@RequestParam(value="page", defaultValue="0") int currentPage) {
 		if (currentPage >= 0) {
 			pageable = PageRequest.of(currentPage, 5);
 		}
